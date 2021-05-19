@@ -1,6 +1,6 @@
 {
-  "name": "bootstrap",
-  "description": "The most popular front-end framework for developing responsive, mobile first projects on the web.",
+  "name": "Bootstrap 5 Material",
+  "description": "Your most popular front-end framework for developing responsive, mobile first projects on the web adapted to Google Material Design.",
   "version": "5.0.1",
   "config": {
     "version_short": "5.0"
@@ -12,6 +12,7 @@
     "responsive",
     "front-end",
     "framework",
+    "material design",
     "web"
   ],
   "homepage": "https://getbootstrap.com/",
@@ -95,7 +96,6 @@
     "type": "opencollective",
     "url": "https://opencollective.com/bootstrap"
   },
-  "dependencies": {},
   "peerDependencies": {
     "@popperjs/core": "^2.9.2"
   },

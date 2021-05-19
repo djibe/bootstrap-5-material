@@ -1,5 +1,5 @@
 languageCode:           "en"
-title:                  "Bootstrap"
+title:                  "Bootstrap 5 Material"
 baseURL:                "https://getbootstrap.com"
 enableInlineShortcodes: true
 
@@ -43,7 +43,7 @@ module:
 
 params:
   description:          "The most popular HTML, CSS, and JS library in the world."
-  authors:              "Mark Otto, Jacob Thornton, and Bootstrap contributors"
+  authors:              "Bootstrap authors and djibe"
   social_image_path:    /docs/5.0/assets/brand/bootstrap-social.png
   social_logo_path:     /docs/5.0/assets/brand/bootstrap-social-logo.png
 
