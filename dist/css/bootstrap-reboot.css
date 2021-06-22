@@ -19,11 +19,11 @@
 
 body {
   margin: 0;
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: Roboto, system-ui, -apple-system, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #212529;
+  color: #212121;
   background-color: #fff;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -31,10 +31,10 @@ body {
 
 hr {
   margin: 1rem 0;
-  color: inherit;
+  color: #e0e0e0;
   background-color: currentColor;
   border: 0;
-  opacity: 0.25;
+  opacity: 1;
 }
 
 hr:not([size]) {
@@ -99,10 +99,8 @@ p {
 
 abbr[title],
 abbr[data-bs-original-title] {
-  -webkit-text-decoration: underline dotted;
   text-decoration: underline dotted;
   cursor: help;
-  -webkit-text-decoration-skip-ink: none;
   text-decoration-skip-ink: none;
 }
 
@@ -132,7 +130,7 @@ ul ol {
 }
 
 dt {
-  font-weight: 700;
+  font-weight: 500;
 }
 
 dd {
@@ -146,7 +144,7 @@ blockquote {
 
 b,
 strong {
-  font-weight: bolder;
+  font-weight: 600;
 }
 
 small {
@@ -175,11 +173,10 @@ sup {
 }
 
 a {
-  color: #0d6efd;
-  text-decoration: underline;
+  color: #6200ee;
 }
 a:hover {
-  color: #0a58ca;
+  color: #4e00be;
 }
 
 a:not([href]):not([class]), a:not([href]):not([class]):hover {
@@ -191,7 +188,7 @@ pre,
 code,
 kbd,
 samp {
-  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-family: "Roboto Mono", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   font-size: 1em;
   direction: ltr /* rtl:ignore */;
   unicode-bidi: bidi-override;
@@ -223,13 +220,13 @@ kbd {
   padding: 0.2rem 0.4rem;
   font-size: 0.875em;
   color: #fff;
-  background-color: #212529;
-  border-radius: 0.2rem;
+  background-color: #212121;
+  border-radius: 0.125rem;
 }
 kbd kbd {
   padding: 0;
   font-size: 1em;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 figure {
@@ -249,7 +246,7 @@ table {
 caption {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  color: #6c757d;
+  color: #9e9e9e;
   text-align: left;
 }
 

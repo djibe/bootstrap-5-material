@@ -11,6 +11,8 @@
 
 <link rel="canonical" href="{{ .Permalink }}">
 
+{{ partial "font" . }}
+
 {{ with .Params.robots -}}
 <meta name="robots" content="{{ . }}">
 {{- end }}
@@ -18,4 +20,3 @@
 {{ partial "stylesheet" . }}
 {{ partial "favicons" . }}
 {{ partial "social" . }}
-{{ partial "analytics" . }}
