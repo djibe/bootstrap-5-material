@@ -7,13 +7,13 @@
 
 // scss-docs-start gray-color-variables
 $white:    #fff !default;
-$gray-100: #f8f9fa !default;
-$gray-200: #e9ecef !default;
-$gray-300: #dee2e6 !default;
-$gray-400: #ced4da !default;
-$gray-500: #adb5bd !default;
+$gray-100: #f5f5f5 !default;
+$gray-200: #eee !default;
+$gray-300: #e0e0e0 !default;
+$gray-400: #bdbdbd !default;
+$gray-500: #9e9e9e !default;
 $gray-600: #757575 !default;
-$gray-700: #495057 !default;
+$gray-700: #616161 !default;
 $gray-800: #424242 !default;
 $gray-900: #212121 !default;
 $black:    #000 !default;
@@ -286,7 +286,7 @@ $body-text-align:           null !default;
 // Style anchor elements.
 
 $link-color:                              $primary !default;
-$link-decoration:                         underline !default;
+$link-decoration:                         null !default;
 $link-shade-percentage:                   20% !default;
 $link-hover-color:                        shift-color($link-color, $link-shade-percentage) !default;
 $link-hover-decoration:                   null !default;
@@ -372,8 +372,8 @@ $border-color:                $gray-300 !default;
 
 // scss-docs-start border-radius-variables
 $border-radius:               .25rem !default;
-$border-radius-sm:            .2rem !default;
-$border-radius-lg:            .3rem !default;
+$border-radius-sm:            .125rem !default;
+$border-radius-lg:            1rem !default;
 $border-radius-pill:          50rem !default;
 // scss-docs-end border-radius-variables
 
@@ -416,8 +416,9 @@ $aspect-ratios: (
 
 // scss-docs-start font-variables
 // stylelint-disable value-keyword-case
-$font-family-sans-serif:      system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
-$font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+// Based on https://material.google.com/style/typography.html#typography-typeface
+$font-family-sans-serif:      Roboto, system-ui, -apple-system, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-monospace:       "Roboto Mono", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 // stylelint-enable value-keyword-case
 $font-family-base:            var(--#{$variable-prefix}font-sans-serif) !default;
 $font-family-code:            var(--#{$variable-prefix}font-monospace) !default;
@@ -429,11 +430,11 @@ $font-size-base:              1rem !default; // Assumes the browser default, typ
 $font-size-sm:                $font-size-base * .875 !default;
 $font-size-lg:                $font-size-base * 1.25 !default;
 
-$font-weight-lighter:         lighter !default;
+$font-weight-lighter:         300 !default;
 $font-weight-light:           300 !default;
 $font-weight-normal:          400 !default;
-$font-weight-bold:            700 !default;
-$font-weight-bolder:          bolder !default;
+$font-weight-bold:            500 !default;
+$font-weight-bolder:          600 !default;
 
 $font-weight-base:            $font-weight-normal !default;
 
@@ -471,12 +472,12 @@ $headings-color:              null !default;
 
 // scss-docs-start display-headings
 $display-font-sizes: (
-  1: 5rem,
-  2: 4.5rem,
-  3: 4rem,
-  4: 3.5rem,
-  5: 3rem,
-  6: 2.5rem
+  1: 6rem,
+  2: 3.75rem,
+  3: 3.125rem,
+  4: 2.5rem,
+  5: 2rem,
+  6: 2rem
 ) !default;
 
 $display-font-weight: 300 !default;
@@ -484,14 +485,14 @@ $display-line-height: $headings-line-height !default;
 // scss-docs-end display-headings
 
 // scss-docs-start type-variables
-$lead-font-size:              $font-size-base * 1.25 !default;
-$lead-font-weight:            300 !default;
+$lead-font-size:              $font-size-base * 1.5 !default;
+$lead-font-weight:            400 !default;
 
 $small-font-size:             .875em !default;
 
 $sub-sup-font-size:           .75em !default;
 
-$text-muted:                  $gray-600 !default;
+$text-muted:                  $gray-500 !default;
 
 $initialism-font-size:        $small-font-size !default;
 
@@ -501,9 +502,9 @@ $blockquote-footer-color:     $gray-600 !default;
 $blockquote-footer-font-size: $small-font-size !default;
 
 $hr-margin-y:                 $spacer !default;
-$hr-color:                    inherit !default;
+$hr-color:                    $gray-300 !default;
 $hr-height:                   $border-width !default;
-$hr-opacity:                  .25 !default;
+$hr-opacity:                  1 !default;
 
 $legend-margin-bottom:        .5rem !default;
 $legend-font-size:            1.5rem !default;
@@ -583,9 +584,9 @@ $table-variants: (
 
 // scss-docs-start input-btn-variables
 $input-btn-padding-y:         .375rem !default;
-$input-btn-padding-x:         .75rem !default;
+$input-btn-padding-x:         $spacer !default;
 $input-btn-font-family:       null !default;
-$input-btn-font-size:         $font-size-base !default;
+$input-btn-font-size:         $font-size-sm !default;
 $input-btn-line-height:       $line-height-base !default;
 
 $input-btn-focus-width:         .25rem !default;
@@ -616,7 +617,7 @@ $btn-padding-x:               $input-btn-padding-x !default;
 $btn-font-family:             $input-btn-font-family !default;
 $btn-font-size:               $input-btn-font-size !default;
 $btn-line-height:             $input-btn-line-height !default;
-$btn-white-space:             null !default; // Set to `nowrap` to prevent text wrapping
+$btn-white-space:             nowrap !default; // Set to `nowrap` to prevent text wrapping
 
 $btn-padding-y-sm:            $input-btn-padding-y-sm !default;
 $btn-padding-x-sm:            $input-btn-padding-x-sm !default;
@@ -1192,21 +1193,21 @@ $popover-arrow-outer-color:         fade-in($popover-border-color, .05) !default
 // Toasts
 
 // scss-docs-start toast-variables
-$toast-max-width:                   350px !default;
-$toast-padding-x:                   .75rem !default;
-$toast-padding-y:                   .5rem !default;
-$toast-font-size:                   .875rem !default;
-$toast-color:                       null !default;
-$toast-background-color:            rgba($white, .85) !default;
-$toast-border-width:                1px !default;
-$toast-border-color:                rgba(0, 0, 0, .1) !default;
+$toast-max-width:                   42rem !default;
+$toast-padding-x:                   $spacer !default;
+$toast-padding-y:                   0.875rem !default;
+$toast-font-size:                   null !default;
+$toast-color:                       rgba($white, 0.87) !default;
+$toast-background-color:            #333333 !default;
+$toast-border-width:                null !default;
+$toast-border-color:                null !default;
 $toast-border-radius:               $border-radius !default;
 $toast-box-shadow:                  $box-shadow !default;
 $toast-spacing:                     $container-padding-x !default;
 
-$toast-header-color:                $gray-600 !default;
+$toast-header-color:                $toast-color !default;
 $toast-header-background-color:     rgba($white, .85) !default;
-$toast-header-border-color:         rgba(0, 0, 0, .05) !default;
+$toast-header-border-color:         null !default;
 // scss-docs-end toast-variables
 
 
@@ -1217,7 +1218,7 @@ $badge-font-size:                   .75em !default;
 $badge-font-weight:                 $font-weight-bold !default;
 $badge-color:                       $white !default;
 $badge-padding-y:                   .35em !default;
-$badge-padding-x:                   .65em !default;
+$badge-padding-x:                   .5em !default;
 $badge-border-radius:               $border-radius !default;
 // scss-docs-end badge-variables
 
@@ -1253,15 +1254,15 @@ $modal-header-padding-y:            $modal-inner-padding !default;
 $modal-header-padding-x:            $modal-inner-padding !default;
 $modal-header-padding:              $modal-header-padding-y $modal-header-padding-x !default; // Keep this for backwards compatibility
 
-$modal-sm:                          300px !default;
-$modal-md:                          500px !default;
-$modal-lg:                          800px !default;
-$modal-xl:                          1140px !default;
+$modal-sm:                          280px !default;
+$modal-md:                          560px !default;
+$modal-lg:                          840px !default;
+$modal-xl:                          100vw !default;
 
-$modal-fade-transform:              translate(0, -50px) !default;
-$modal-show-transform:              none !default;
-$modal-transition:                  transform .3s ease-out !default;
-$modal-scale-transform:             scale(1.02) !default;
+$modal-fade-transform:              scale(0.8) !default;
+$modal-show-transform:              scale(1) !default;
+$modal-transition:                  transform .15s cubic-bezier(0, 0, 0.2, 1)  !default;
+$modal-scale-transform:             scale(1) !default;
 // scss-docs-end modal-variables
 
 
@@ -1286,15 +1287,15 @@ $alert-dismissible-padding-r:   $alert-padding-x * 3 !default; // 3x covers widt
 // Progress bars
 
 // scss-docs-start progress-variables
-$progress-height:                   1rem !default;
+$progress-height:                   0.25rem !default;
 $progress-font-size:                $font-size-base * .75 !default;
-$progress-bg:                       $gray-200 !default;
-$progress-border-radius:            $border-radius !default;
-$progress-box-shadow:               $box-shadow-inset !default;
+$progress-bg:                       null !default;
+$progress-border-radius:            $border-radius-sm !default;
+$progress-box-shadow:               null !default;
 $progress-bar-color:                $white !default;
 $progress-bar-bg:                   $primary !default;
 $progress-bar-animation-timing:     1s linear infinite !default;
-$progress-bar-transition:           width .6s ease !default;
+$progress-bar-transition:           width .25s cubic-bezier(0.4, 0, 0.6, 1) !default;
 // scss-docs-end progress-variables
 
 
